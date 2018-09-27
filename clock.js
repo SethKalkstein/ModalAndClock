@@ -15,6 +15,9 @@ Date.prototype.hoursAmPm = function () {
 	else if (this.getHours()>=12) {
 		return this.getHours()-12;
 	}
+	else {
+		return this.getHours();
+	}
 }
 
 
