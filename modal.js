@@ -13,8 +13,16 @@ function createBox1(){
 	var box2 = createBox2();
 	box1.appendChild(box2);
 	box2.addEventListener("click",function(){
-		box1.style.display = "none";
+	box1.style.display = "none";
 	})
+	var boxText = document.createElement("p");
+	boxText.style.border="1px solid black"
+	boxText.innerHTML = "anim id est laborum.Lorem ipsum dolorloremlorem";
+	box1.appendChild(boxText);
+	var boxLink = document.createElement("a");
+	boxLink.setAttribute("href","clock.html");
+	boxLink.innerHTML = "Click here to go to the clock";
+	box1.appendChild(boxLink);
 }
 
 

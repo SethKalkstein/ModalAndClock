@@ -1,5 +1,38 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #f9f2ac;
+}
 main img {
 	height: 200px;
 	width: 200px;
 	float: left; 
 }
+#clock{
+	padding: 200px;
+	margin: 0px auto;
+}
+
+#clock-wrapper {
+	display: grid;
+	grid-template-columns: 1fr .2fr 1fr .2fr 1fr 1.2fr;
+	width: 180px;
+	border: 2px solid white;
+	border-radius: 25px;
+	padding: 5px 10px;
+	margin: 0px auto;
+}
+#clock-wrapper div{
+	height: 40px;
+	/*border: 1px solid;*/
+	font-size: 2em;
+	text-align: center;
+	color: white;
+}
+
+
+/*#clock-wrapper #hours{
+	text-align: right;
+}*/
