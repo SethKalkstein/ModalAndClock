@@ -16,18 +16,19 @@ function createBox1(){
 	box1.style.display = "none";
 	})
 	var boxText = document.createElement("p");
-	boxText.style.border="1px solid black"
-	boxText.innerHTML = "anim id est laborum.Lorem ipsum dolorloremlorem";
+	boxText.innerHTML = "anim id est laborum. Lorem ipsum dolorlore mlorem est laborum. Lorem ipsum dolorlorem.";
 	box1.appendChild(boxText);
 	var boxLink = document.createElement("a");
 	boxLink.setAttribute("href","clock.html");
 	boxLink.innerHTML = "Click here to go to the clock";
 	box1.appendChild(boxLink);
+	boxText.style.padding = "10px";
+	boxLink.style.padding = "10px";
 }
 
 
 function modalPopup(){
-	setTimeout(createBox1, 1000)
+	setTimeout(createBox1, 3000)
 }
 window.addEventListener("load", modalPopup);
 
@@ -44,6 +45,9 @@ window.addEventListener("load", modalPopup);
 	box2.style.float= "right";
 	box2.innerHTML = "X";
 	box2.style.padding = "auto";
+	box2.addEventListener("mouseover",function(){
+		box2.style.cursor= "pointer";
+	})
  	return box2;
  }
 

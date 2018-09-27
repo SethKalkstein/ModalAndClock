@@ -5,6 +5,19 @@
 body{
 	background-color: #f9f2ac;
 }
+ul{
+	display: flexbox;
+	align-items: flex-end;
+	align-content: flex-end;
+	padding: 0px auto;
+}
+ul li{
+	display: inline;
+	text-decoration: none;
+}
+li a{
+	text-decoration: none;
+}
 main img {
 	height: 200px;
 	width: 200px;
@@ -13,6 +26,10 @@ main img {
 #clock{
 	padding: 200px;
 	margin: 0px auto;
+}
+#modal {
+	background-color: #fdffef;
+	padding: 10px;
 }
 
 #clock-wrapper {
