@@ -47,12 +47,16 @@ function addTimeHTML(){
 }
 var mainBack = document.getElementsByTagName("main")[0];
 var mainBody = document.getElementsByTagName("body")[0];
+var headerLink1 = document.getElementsByTagName("a")[0];
+var headerLink2 = document.getElementsByTagName("a")[1];
 function changeBackground (hour, minute, second) {
 	second= stringChanger(second);
 	minute= stringChanger(minute);
 	hour= stringChanger(hour);
 	mainBack.style.backgroundColor = "#"+hour+minute+second;
 	mainBody.style.color = "#"+hour+minute+second;
+	headerLink1.style.color = "#"+hour+minute+second;
+	headerLink2.style.color = "#"+hour+minute+second;
 }
 
 function stringChanger (timeVar){

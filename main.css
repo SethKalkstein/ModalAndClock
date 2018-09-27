@@ -5,18 +5,31 @@
 body{
 	background-color: #f9f2ac;
 }
-ul{
-	display: flexbox;
-	align-items: flex-end;
-	align-content: flex-end;
-	padding: 0px auto;
+nav {
+	width: 90%;
+	display: flex;
+/*	align-self: flex-end;*/
+/*	align-items: flex-end;*/
+/*	align-content: flex-start;*/
+	margin: 0px auto;
+	padding: 5px;
 }
-ul li{
-	display: inline;
+
+nav a{
+	display: block;
 	text-decoration: none;
+	text-align: center;
+	margin: 0px auto;
+	text-decoration: none;
+	font-size: 1.5em;
 }
-li a{
-	text-decoration: none;
+nav a:hover{
+	color: lightgrey;
+}
+h1{
+	text-align: center;
+	padding: 5px;
+	border-top: 2px solid;
 }
 main img {
 	height: 200px;
@@ -49,7 +62,15 @@ main img {
 	color: white;
 }
 
-
+footer {
+	padding: 20px;
+}
+footer h4 {
+	padding: 5px 0px;
+}
+footer h5 {
+	padding: 0 0 0 1px;
+}
 /*#clock-wrapper #hours{
 	text-align: right;
 }*/
