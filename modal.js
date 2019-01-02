@@ -1,64 +1,64 @@
 
-function createBox1(){
-	var box1 = document.createElement("div");
+function createModal(){
+	var theModal = document.createElement("div");
 	
-	box1.style.width = "300px";
-	box1.style.height = "130px";
-	box1.style.backgroundColor = "white";
-	box1.style.border= "1px solid black";
-	box1.style.position = "absolute";
-	box1.style.top = "100px";
-	box1.style.right = "200px"
-	box1.style.borderRadius = "5px";
+	theModal.style.width = "300px";
+	theModal.style.height = "130px";
+	theModal.style.backgroundColor = "white";
+	theModal.style.border= "1px solid black";
+	theModal.style.position = "absolute";
+	theModal.style.top = "100px";
+	theModal.style.right = "200px"
+	theModal.style.borderRadius = "5px";
 
-	document.body.appendChild(box1);
+	document.body.appendChild(theModal);
 	
-	var box2 = createBox2();
+	var theExitButton = createExitButton();
 	
-	box1.appendChild(box2);
+	theModal.appendChild(theExitButton);
 	
-	box2.addEventListener("click",function(){
-		box1.style.display = "none";
+	theExitButton.addEventListener("click",function(){
+		theModal.style.display = "none";
 	})
 
 	var boxText = document.createElement("p");
 	boxText.innerHTML = "anim id est laborum. Lorem ipsum dolorlore mlorem est laborum. Lorem ipsum dolorlorem.";
-	box1.appendChild(boxText);
+	theModal.appendChild(boxText);
 	var boxLink = document.createElement("a");
 	boxLink.setAttribute("href", "index.html");
 
 	boxLink.innerHTML = "Click here to go to the clock";
 	
-	box1.appendChild(boxLink);
+	theModal.appendChild(boxLink);
 	boxText.style.padding = "10px";
 	boxLink.style.padding = "10px";
 }
 
 
 function modalPopup(){
-	setTimeout(createBox1, 1000)
+	setTimeout(createModal, 2000)
 }
 window.addEventListener("load", modalPopup);
 
 //
- function createBox2(){
- 	var box2 = document.createElement("div");
+ function createExitButton(){
+ 	var theExitButton = document.createElement("div");
 
- 	box2.style.width = "15px";
- 	box2.style.height = "17px";
+ 	theExitButton.style.width = "15px";
+ 	theExitButton.style.height = "17px";
 
- 	box2.style.borderLeft= "1px solid black";
- 	box2.style.borderBottom= "1px solid black";
-	box2.style.position = "relative";
+ 	theExitButton.style.borderLeft= "1px solid black";
+ 	theExitButton.style.borderBottom= "1px solid black";
+	theExitButton.style.position = "relative";
 
-	box2.style.float= "right";
-	box2.innerHTML = "X";
-	box2.style.paddingLeft = "3px";
+	theExitButton.style.float= "right";
+	theExitButton.innerHTML = "X";
+	theExitButton.style.paddingLeft = "3px";
 
-	box2.addEventListener("mouseover",function(){
-		box2.style.cursor= "pointer";
+	theExitButton.addEventListener("mouseover",function(){
+		theExitButton.style.cursor= "pointer";
 	})
 
- 	return box2;
+ 	return theExitButton;
  }
 
