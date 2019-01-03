@@ -1,7 +1,11 @@
 
 function createModal(){
+	//variables representing different html elements in the modal and the modal itself
 	var theModal = document.createElement("div");
-	
+	var modalExitButton = createExitButton();
+	var boxText = document.createElement("p");
+	var boxLink = document.createElement("a");
+	//styling for the modal box itself
 	theModal.style.width = "300px";
 	theModal.style.height = "130px";
 	theModal.style.backgroundColor = "white";
@@ -10,28 +14,22 @@ function createModal(){
 	theModal.style.top = "100px";
 	theModal.style.right = "200px"
 	theModal.style.borderRadius = "5px";
-
-	document.body.appendChild(theModal);
-	
-	var theExitButton = createExitButton();
-	
-	theModal.appendChild(theExitButton);
-	
-	theExitButton.addEventListener("click",function(){
+	//adds an event listener to the exit button (the button itself is styled in its own function) CLicking the exit button makes the modal disapear
+	modalExitButton.addEventListener("click",function(){
 		theModal.style.display = "none";
 	})
-
-	var boxText = document.createElement("p");
+	//styling (and content) for the text in the box
 	boxText.innerHTML = "anim id est laborum. Lorem ipsum dolorlore mlorem est laborum. Lorem ipsum dolorlorem.";
-	theModal.appendChild(boxText);
-	var boxLink = document.createElement("a");
-	boxLink.setAttribute("href", "index.html");
-
-	boxLink.innerHTML = "Click here to go to the clock";
-	
-	theModal.appendChild(boxLink);
 	boxText.style.padding = "10px";
+	//styling for the link which takes you to the clock page	
+	boxLink.setAttribute("href", "index.html");
+	boxLink.innerHTML = "Click here to go to the clock";
 	boxLink.style.padding = "10px";
+	//attach the modal to the document and the modal's element to the modal
+	document.body.appendChild(theModal);
+	theModal.appendChild(modalExitButton);
+	theModal.appendChild(boxText);
+	theModal.appendChild(boxLink);
 }
 
 
@@ -47,11 +45,11 @@ window.addEventListener("load", modalPopup);
  	theExitButton.style.width = "15px";
  	theExitButton.style.height = "17px";
 
- 	theExitButton.style.borderLeft= "1px solid black";
- 	theExitButton.style.borderBottom= "1px solid black";
+ 	theExitButton.style.borderLeft = "1px solid black";
+ 	theExitButton.style.borderBottom = "1px solid black";
 	theExitButton.style.position = "relative";
 
-	theExitButton.style.float= "right";
+	theExitButton.style.float = "right";
 	theExitButton.innerHTML = "X";
 	theExitButton.style.paddingLeft = "3px";
 
