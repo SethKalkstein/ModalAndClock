@@ -2,7 +2,7 @@
 function createModal(){
 	//variables representing different html elements in the modal and the modal itself
 	var theModal = document.createElement("div");
-	var modalExitButton = createExitButton();
+	var modalExitButton = createExitButton(); //div created by the createExitButton() function
 	var boxText = document.createElement("p");
 	var boxLink = document.createElement("a");
 	//styling for the modal box itself
@@ -32,31 +32,28 @@ function createModal(){
 	theModal.appendChild(boxLink);
 }
 
-
-function modalPopup(){
-	setTimeout(createModal, 2000)
-}
-window.addEventListener("load", modalPopup);
-
-//
  function createExitButton(){
  	var theExitButton = document.createElement("div");
-
+ 	//button styling
  	theExitButton.style.width = "15px";
  	theExitButton.style.height = "17px";
-
  	theExitButton.style.borderLeft = "1px solid black";
  	theExitButton.style.borderBottom = "1px solid black";
 	theExitButton.style.position = "relative";
-
 	theExitButton.style.float = "right";
-	theExitButton.innerHTML = "X";
 	theExitButton.style.paddingLeft = "3px";
-
+	//button content
+	theExitButton.innerHTML = "X";
+	//hover effect 
 	theExitButton.addEventListener("mouseover",function(){
 		theExitButton.style.cursor= "pointer";
 	})
 
  	return theExitButton;
  }
-
+//function to set the timeout for the creation of the modal
+function modalPopup(){
+	setTimeout(createModal, 2000)
+}
+//add an event listener to the page upon loading
+window.addEventListener("load", modalPopup);
